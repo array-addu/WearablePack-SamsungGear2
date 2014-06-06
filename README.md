@@ -46,7 +46,9 @@ Because of the way Samsung Gear 2 works, you will be building:
  To help you get started this repo comes with a sample app called "Today".  
 
 
-##Today App
+##Getting Started
+
+ To help you get started this repo comes with a sample app called "Today".  
 <p align='center'>
   <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/tizen-gif2.gif?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3RpemVuLWdpZjIuZ2lmIiwiZXhwaXJlcyI6MTQwMjcwMTMwMn0%3D--a6836c43ba95027eb793aaf8cccf7f5e263c39a4""/>  
   </img>
