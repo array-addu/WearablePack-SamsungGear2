@@ -37,7 +37,7 @@ Source: http://www.samsung.com/global/microsite/gear/gear2_features.html
 Samsung Gear 2 watch itself doesn't run Android Operating System. Instead it runs on Samsung's open-source <a href="http://tizen.org" target="_blank">Tizen OS</a> that's built in C++. Tizen OS allows people to build apps in either HTML5 or C++ (native). However Samsung Gear 2 only allows us to build HTML5 apps.
 
 ##Getting Started
-Because of the way Samsung Gear 2 works, you will be building: 
+Because of the way Samsung Gear 2 works, you will be building two apps: 
 
 1. An Android App that talks to Salesforce and authenticates user. 
 2. A Tizen web app that communicates with the android app and displays info on the watch.
@@ -46,11 +46,13 @@ Because of the way Samsung Gear 2 works, you will be building:
 
 
 ####Today Example App
- To help you get started this repo comes with a [sample](https://github.com/developerforce/WearablePack-SamsungGear2/tree/master/samples) app called "Today".  
+ To help you get started this repo comes with a [sample](https://github.com/developerforce/WearablePack-SamsungGear2/tree/master/sampes/TodayApp) app called "TodayApp". It has a simple android app that does authentication and sends Salesforce user's "Today's meetings" to the watch from Salesforce Calendar. 
 
   <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/tizen-gif2.gif?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3RpemVuLWdpZjIuZ2lmIiwiZXhwaXJlcyI6MTQwMjcwMTMwMn0%3D--a6836c43ba95027eb793aaf8cccf7f5e263c39a4"/>  
   </img>
 
-It has a simple android app that does authentication and sends Salesforce user's "Today's meetings" to the watch from Salesforce Calendar. To get started, go through the instructions on the readme inside the sample app.
+
+
+To get started, go through the instructions on the readme inside the [TodayApp sample](https://github.com/developerforce/WearablePack-SamsungGear2/tree/master/sampes/TodayApp).
 
 
