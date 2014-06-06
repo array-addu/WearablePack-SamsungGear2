@@ -49,10 +49,7 @@ Because of the way Samsung Gear 2 works, you will be building:
 Getting Started
 ===============
  To help you get started this repo comes with a sample app called "Today".  
-<p align='center'>
-  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/tizen-gif2.gif?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3RpemVuLWdpZjIuZ2lmIiwiZXhwaXJlcyI6MTQwMjcwMTMwMn0%3D--a6836c43ba95027eb793aaf8cccf7f5e263c39a4""/>  
-  </img>
-</p>
+
 It has a simple android app that does authentication and sends Salesforce user's "Today's meetings" to the watch from Salesforce Calendar. To get started, go through the instructions on the readme inside the sample app.
 
 
