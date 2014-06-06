@@ -30,6 +30,9 @@ Because of the way Samsung Gear 2 works, you will be building:
 1. An Android App that talks to Salesforce and authenticates user. 
 2. A Tizen web app that communicates with the android app and displays info on the watch.
 
+
+
+
 ##Today App
 
 <p align='center'>
