@@ -2,7 +2,7 @@
 
 <p align='center'>
 
-  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/samsung-watch-and-phone.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3NhbXN1bmctd2F0Y2gtYW5kLXBob25lLnBuZyIsImV4cGlyZXMiOjE0MDI2OTc5Nzl9--03a97ec125422574dd1bf6998b61a9c6be1b2920" width="75%" />    
+  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/samsung-watch-and-phone-3.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3NhbXN1bmctd2F0Y2gtYW5kLXBob25lLnBuZyIsImV4cGlyZXMiOjE0MDI2OTc5Nzl9--03a97ec125422574dd1bf6998b61a9c6be1b2920" width="75%" />    
 
     
 </p>
@@ -45,14 +45,14 @@ Because of the way Samsung Gear 2 works, you will be building two apps:
 
 
 
-####Today Example App
- To help you get started this repo comes with a [sample](https://github.com/developerforce/WearablePack-SamsungGear2/tree/master/sampes/TodayApp) app called "TodayApp". It has a simple android app that does authentication and sends Salesforce user's "Today's meetings" to the watch from Salesforce Calendar. 
+###Today Example App
+ To help you get started this repo comes with a [sample](https://github.com/developerforce/WearablePack-SamsungGear2/tree/master/samples/TodayApp) app called "TodayApp". It has a simple android app that does authentication and sends Salesforce user's "Today's meetings" to the watch from Salesforce Calendar. 
 
   <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/tizen-gif2.gif?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3RpemVuLWdpZjIuZ2lmIiwiZXhwaXJlcyI6MTQwMjcwMTMwMn0%3D--a6836c43ba95027eb793aaf8cccf7f5e263c39a4"/>  
   </img>
 
 
 
-To get started, go through the instructions on the readme inside the [TodayApp sample](https://github.com/developerforce/WearablePack-SamsungGear2/tree/master/sampes/TodayApp).
+To get started, go through the instructions on the readme inside the [TodayApp sample](https://github.com/developerforce/WearablePack-SamsungGear2/tree/master/samples/TodayApp).
 
 
