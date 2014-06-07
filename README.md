@@ -42,7 +42,11 @@ Because of the way Samsung Gear 2 works, you will be building two apps:
 1. An Android App that talks to Salesforce and authenticates user. 
 2. A Tizen web app that communicates with the android app and displays info on the watch.
 
+<p align="center">
 
+  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/high-level-architecture.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL2hpZ2gtbGV2ZWwtYXJjaGl0ZWN0dXJlLnBuZyIsImV4cGlyZXMiOjE0MDI3MDc5OTd9--3c7597a4a523059428f1b7478b0dddf0358e59cc"/>  
+  </img>
+</p>
 
 
 ###Today Example App
