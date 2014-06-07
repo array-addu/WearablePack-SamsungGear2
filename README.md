@@ -16,7 +16,7 @@ Samsung Gear <a href="http://www.samsung.com/global/microsite/gear/gear2_design.
 
 <ol>
 <li>An Android App that talks to Salesforce and authenticates user. </li>
-<li>A Tizen web app that communicates with the android app and displays info on the watch.</li>
+<li>A Tizen <b>web</b> app that communicates with the android app and displays info on the watch.</li>
 </ol>
 </p>
    
