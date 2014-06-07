@@ -38,12 +38,13 @@ Samsung Gear 2 watch itself doesn't run Android Operating System. Instead it run
 
 ##Getting Started
 
-Because of the way Samsung Gear 2 works, you will be building two apps: 
+<p>Because of the way Samsung Gear 2 works, you will be building two apps: 
 
-
-1. An Android App that talks to Salesforce and authenticates user. 
-2. A Tizen web app that communicates with the android app and displays info on the watch.
-
+<ol>
+<li>An Android App that talks to Salesforce and authenticates user. </li>
+<li>A Tizen web app that communicates with the android app and displays info on the watch.</li>
+</ol>
+</p>
    
 
 <p align="center">
