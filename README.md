@@ -2,7 +2,7 @@
 
 <p align='center'>
 
-  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/samsung-watch-and-phone-3.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3NhbXN1bmctd2F0Y2gtYW5kLXBob25lLnBuZyIsImV4cGlyZXMiOjE0MDI2OTc5Nzl9--03a97ec125422574dd1bf6998b61a9c6be1b2920" width="75%" />    
+  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/samsung-watch-and-phone-3.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3NhbXN1bmctd2F0Y2gtYW5kLXBob25lLTMucG5nIiwiZXhwaXJlcyI6MTQwMjcwNzU3Mn0%3D--76b8409ae656dac6b71a00427177960c1c1fb7c4" width="75%" />    
 
     
 </p>
