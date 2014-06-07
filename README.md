@@ -12,21 +12,9 @@ This Wearable Pack is for <a href="http://developer.samsung.com/samsung-gear" ta
 
 Samsung Gear <a href="http://www.samsung.com/global/microsite/gear/gear2_design.html" target="_blank">wearables</a> like Gear 2, Gear 2 neo etc all need a 'host' android app through which they communicate with the external World. 
 
-One caveat is that these android apps must be running in a compitable Samsung phones or tablets and won't work on devices from other manufacturers like Nexus or LG.
+####Compatibility
+One caveat is that these android apps must be running in a compitable Samsung phones or tablets and won't work on devices from other manufacturers like Google or LG. See the list of compatible devices <a href="http://www.samsung.com/global/microsite/gear/gear2_features.html" target="_blank">here</a> (scroll down to the bottom).
 
-Below shows the list of compatible devices.
- ```
-
-
-Samsung Gear is compatible with 17 types of device models :
-Samsung Galaxy S5 / Galaxy Grand 2 / Galaxy Note 3 / Galaxy Note 3 Neo / Galaxy Note 2 / Galaxy S4 / Galaxy S3 / Galaxy S4 Zoom / Galaxy S4 Active / Galaxy S4 mini /
-Galaxy Mega 6.3 / Galaxy Mega 5.8 / Galaxy Note 10.1 (2014 Edition) / Galaxy NotePRO (12.2) / Galaxy TabPRO (12.2/10.1/8.4)
-* Compatible device models to be further expanded
-* Device compatibility may vary by country.
-
-Source: http://www.samsung.com/global/microsite/gear/gear2_features.html
-
-``` 
 ##Tizen OS
 <p align='center'>
 <a href="http://tizen.org" target="_blank"> 
@@ -36,7 +24,7 @@ Source: http://www.samsung.com/global/microsite/gear/gear2_features.html
   </p>
 Samsung Gear 2 watch itself doesn't run Android Operating System. Instead it runs on Samsung's open-source <a href="http://tizen.org" target="_blank">Tizen OS</a> that's built in C++. Tizen OS allows people to build apps in either HTML5 or C++ (native). However Samsung Gear 2 only allows us to build HTML5 apps.
 
-##Getting Started
+<h2>Getting Started</h2>
 
 <p>Because of the way Samsung Gear 2 works, you will be building two apps: 
 
