@@ -12,20 +12,6 @@ This Wearable Pack is for <a href="http://developer.samsung.com/samsung-gear" ta
 
 Samsung Gear <a href="http://www.samsung.com/global/microsite/gear/gear2_design.html" target="_blank">wearables</a> like Gear 2, Gear 2 neo etc all need a 'host' android app through which they communicate with the external World. 
 
-####Compatibility
-One caveat is that these android apps must be running in a compitable Samsung phones or tablets and won't work on devices from other manufacturers like Google or LG. See the list of compatible devices <a href="http://www.samsung.com/global/microsite/gear/gear2_features.html" target="_blank">here</a> (scroll down to the bottom).
-
-##Tizen OS
-<p align='center'>
-<a href="http://tizen.org" target="_blank"> 
-  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/tizen-logo.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3RpemVuLWxvZ28ucG5nIiwiZXhwaXJlcyI6MTQwMjY5OTUwMH0%3D--07da3d5e3a69067179645a9dd66eaa3d3c1d44dc" height="150px"/>  
-  </img>
-  </a>
-  </p>
-Samsung Gear 2 watch itself doesn't run Android Operating System. Instead it runs on Samsung's open-source <a href="http://tizen.org" target="_blank">Tizen OS</a> that's built in C++. Tizen OS allows people to build apps in either HTML5 or C++ (native). However Samsung Gear 2 only allows us to build HTML5 apps.
-
-<h2>Getting Started</h2>
-
 <p>Because of the way Samsung Gear 2 works, you will be building two apps: 
 
 <ol>
@@ -40,6 +26,21 @@ Samsung Gear 2 watch itself doesn't run Android Operating System. Instead it run
   <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/high-level-architecture.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL2hpZ2gtbGV2ZWwtYXJjaGl0ZWN0dXJlLnBuZyIsImV4cGlyZXMiOjE0MDI3MDc5OTd9--3c7597a4a523059428f1b7478b0dddf0358e59cc"/>  
   </img>
 </p>
+
+####Compatibility
+One caveat is that these android apps must be running in a compitable Samsung phones or tablets and won't work on devices from other manufacturers like Google or LG. See the list of compatible devices <a href="http://www.samsung.com/global/microsite/gear/gear2_features.html" target="_blank">here</a> (scroll down to the bottom).
+
+##Tizen OS
+<p align='center'>
+<a href="http://tizen.org" target="_blank"> 
+  <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/tizen-logo.png?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3RpemVuLWxvZ28ucG5nIiwiZXhwaXJlcyI6MTQwMjY5OTUwMH0%3D--07da3d5e3a69067179645a9dd66eaa3d3c1d44dc" height="150px"/>  
+  </img>
+  </a>
+  </p>
+Samsung Gear 2 watch itself doesn't run Android Operating System. Instead it runs on Samsung's open-source <a href="http://tizen.org" target="_blank">Tizen OS</a> that's built in C++. Tizen OS allows people to build apps in either HTML5 or C++ (native). However Samsung Gear 2 only allows us to build HTML5 apps.
+
+<h2>Getting Started</h2>
+
 
 
 ###Today Example App
