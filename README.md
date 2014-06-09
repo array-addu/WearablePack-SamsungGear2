@@ -1,4 +1,4 @@
-## Salesforce Wearable Pack for Samsung Gear 2
+## Salesforce Wear Pack for Samsung Gear 2
 
 <p align='center'>
 
@@ -7,10 +7,10 @@
     
 </p>
 
-This Wearable Pack is for <a href="http://developer.samsung.com/samsung-gear" target="_blank"> Samsung Gear 2</a> Wearable and includes an architecture overview article along with a sample application to get you started building applications which integrate Salesforce with Samsung Gear 2.
+This Salesforce Wear Pack is for <a href="http://developer.samsung.com/samsung-gear" target="_blank"> Samsung Gear 2</a> Wearable and includes an architecture overview article along with a sample application to get you started building applications which integrate Salesforce with Samsung Gear 2.
 
 
-Samsung Gear <a href="http://www.samsung.com/global/microsite/gear/gear2_design.html" target="_blank">wearables</a> like Gear 2, Gear 2 neo etc all need a 'host' android app through which they communicate with the external World. 
+Samsung Gear <a href="http://www.samsung.com/global/microsite/gear/gear2_design.html" target="_blank">wearables</a> like Gear 2, Gear 2 neo, etc., all need a 'host' android app through which they communicate with the external World. 
 
 <p>Because of the way Samsung Gear 2 works, you will be building two apps: 
 
