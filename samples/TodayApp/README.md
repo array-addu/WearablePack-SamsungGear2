@@ -29,6 +29,9 @@ Further there is a Tizen emulator, a real Samsung phone and several libraries th
 Also there are several "<b>Gotchas</b>" along the way that you need to be aware of before doing anything.
 
 So here are the steps:
+####STEP 0
+If something doesn't work, please go through the 'gotchas' section below.
+
 ####STEP 1
 
 Watch the following videos from Samsung to learn about how to setup your environment and also learn how the whole architecture work. Also follow the steps in the video to setup your environment.
@@ -70,12 +73,12 @@ The above videos shows you how to setup the environment. Once that's done, clone
   	
 ###Gotchas
 1. Make sure to UNINSTALL `Samsung Gear Manager` app if you have already downloaded it from Samsung store. The 3 apk files you installed actually installs an emulator version of `Samsung Gear Manager` <b>which will conflict with the real</b> `Samsung Gear Manager`
-2. Make sure you done have adb port forwarding `adb -d forward tcp:8230 tcp:8230` done BEFORE emulator startups.
+2. Make sure you done have adb port forwarding `adb -d forward tcp:8230 tcp:8230` done <b>BEFORE the emulator startups</b>.
 3. You will need to kill the emulator and restart it every time you disconnect your Samsung device.
 4. It is good to have the latest Samsung device and Android SDK.
 5. If you are unable to unzip 'Applications For Emulator' zip file on mac(that contains 3 .apk files), see <a href="http://developer.samsung.com/forum/board/thread/view.do?boardName=SDK&messageId=264778&startId=zzzzz~&searchType=ALL&searchText=zip" target="_blank">this forum post</a> 
 6. Android Emulator wont work - so please use a real Samsung device.
-7. When you try to swipe on the emulator, first press 'command' button to use mouse-pointer.
+7. To interact with the emulator using mouse pointer, <b>first press 'command' button</b> then use the mouse.
 
 
   
