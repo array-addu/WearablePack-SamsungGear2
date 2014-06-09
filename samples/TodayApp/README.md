@@ -1,7 +1,7 @@
 
 ##Today Example App
 
- This Gear app authenticates the user and sends  user's Today's meetings to the watch from Salesforce Calendar. 
+ This Gear app authenticates the user and sends user's Today's meetings to the watch from Salesforce Calendar. 
 
   <img src="https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/tizen-gif2.gif?token=626337__eyJzY29wZSI6IlJhd0Jsb2I6ZGV2ZWxvcGVyZm9yY2UvV2VhcmFibGVQYWNrLVNhbXN1bmdHZWFyMi9tYXN0ZXIvaW1hZ2VzL3RpemVuLWdpZjIuZ2lmIiwiZXhwaXJlcyI6MTQwMjcwMTMwMn0%3D--a6836c43ba95027eb793aaf8cccf7f5e263c39a4"/>  
   </img>
@@ -26,7 +26,7 @@ Developing Gear 2 app involves lots of moving parts. There will be two Eclipse e
 
 Further there is a Tizen emulator, a real Samsung phone and several libraries that needs to be imported to get started.
 
-Also there are several "Gotchas" along the way that you need to be aware of before doing anything.
+Also there are several "<b>Gotchas</b>" along the way that you need to be aware of before doing anything.
 
 So here are the steps:
 ####STEP 1
@@ -39,12 +39,12 @@ Watch the following videos from Samsung to learn about how to setup your environ
 4.     <a href="http://www.youtube.com/watch?v=SFz3n49QUCs&index=6&list=PL7PfK8Mp1rLGhuYZMUfJv25zLaCtjx3VC" target="_blank">How to create integrated Gear Application Part03</a>
 
 ####STEP 2 (Android App)
-The above videos shows you how to setup the environment. Once that's done, clone this github project and go to `samples` directory.
+The above videos shows you how to setup the environment. Once that's done, clone this github project and go to `samples` directory. (Jump to step 5 if the connection b/w Tizen emulator and Android device is working based on the steps in the video)
 
 1. Import `TodayAnrdoidApp` into ADT (Android Development Toolkit).
 	- `File > Import > Android > Existing Android Code Into Workspace > TodayAnrdoidApp folder`
 2. Connect a compitable Samsung phone/tablet. (note: Android emulator won't work)
-3. Install 3 .apk files that were mentioned in the videos using `adb` tool. This  installs a test app on the Samsung device to test connection between Samsung device and Tizen emulator.
+3. Install three .apk files that were mentioned in the videos using `adb` tool. This  installs a test app on the Samsung device to test connection between Samsung device and Tizen emulator.
    - `adb` tool comes with Android SDK.  It is located in `path-to-your-android-sdk-folder/build-tools/adb`
    - Run the following from the terminal(in the same order):
    -  `adb -d install path-to-downloaded-Applications_for_Emulator-folder/SAccessoryService_Emul.apk ` 
@@ -74,7 +74,9 @@ The above videos shows you how to setup the environment. Once that's done, clone
 3. You will need to kill the emulator and restart it every time you disconnect your Samsung device.
 4. It is good to have the latest Samsung device and Android SDK.
 5. If you are unable to unzip 'Applications For Emulator' zip file on mac(that contains 3 .apk files), see <a href="http://developer.samsung.com/forum/board/thread/view.do?boardName=SDK&messageId=264778&startId=zzzzz~&searchType=ALL&searchText=zip" target="_blank">this forum post</a> 
-6. Android Emulator wont work - so please use real Samsung device.
+6. Android Emulator wont work - so please use a real Samsung device.
+7. When you try to swipe on the emulator, first press 'command' button to use mouse-pointer.
+
 
   
 ###STEP 4 (Running the app)
