@@ -82,7 +82,7 @@ At this point you should have both Tizen and Andriod app running. And you should
 
 PS: Make sure you have few meetings created for the day with few attendees, location etc. 
  	 
-##Code Highlights
+##Code Highlights (Android)
 
 * The code below in MainActivity starts Tizen service.
 
@@ -135,6 +135,68 @@ PS: Make sure you have few meetings created for the day with few attendees, loca
 			}).start();
 		}
 		
+```
+
+* When the user opens the app on the watch the following `onReceive` method is called by Samsung SDK.
+
+```
+		public void onReceive(int channelId, byte[] data) {
+			Log.d(TAG, "onReceive");
+			//When Watch asks.. call salesforce and return results
+			makeRESTCallToSalesforce();
+		}
+```
+
+* Channel ID is used to send/receive messages between watch and the android app. So you must have the same channel number on both watch and the android app.
+
+```
+	public static final int HELLOACCESSORY_CHANNEL_ID = 104;
+```
+
+
+##Code Highlights (Tizen)
+* onconnect is called when the Tizen connects to Android. It also calls `fetch` custom function. 
+
+```
+var agentCallback = {
+	onconnect : function(socket) {
+		SASocket = socket;
+		// alert("HelloAccessory Connection established with RemotePeer");
+		createHTML("startConnection");
+
+		SASocket.setSocketStatusListener(function(reason) {
+			console.log("Service connection lost, Reason : [" + reason + "]");
+			disconnect();
+		});
+
+		// fetch data..
+		fetch(ACTION_FETCH_MEETINGS);
+	},
+	onerror : onerror
+};
+```
+
+* `fetch` sends a message to Tizen and asks it to get list of meetings using the same channel Id (104 in this case). And also provides `onreceive` function as a callback function.
+
+```
+function fetch(actionName) {
+	try {
+		SASocket.setDataReceiveListener(onreceive);
+		SASocket.sendData(CHANNELID, actionName);
+	} catch (err) {
+		console.log("exception [" + err.name + "] msg[" + err.message + "]");
+	}
+}
+``` 
+
+* `onreceive` simply updates the html of the app.
+
+```
+
+//Receive data from Android app
+function onreceive(channelId, data) {
+	updateMeetings(data);
+}
 ```
 
 
