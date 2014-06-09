@@ -33,7 +33,7 @@ So here are the steps:
 
 Watch the following videos from Samsung to learn about how to setup your environment and also learn how the whole architecture work. Also follow the steps in the video to setup your environment.
 
-1.  <a href="http://www.youtube.com/watch?v=gYwu4PihSCU" target="_blank">Hello, Gear!" - Gear Pre-development Preparation 01</a>
+1.  <a href="http://www.youtube.com/watch?v=gYwu4PihSCU" target="_blank">Hello, Gear! - Gear Pre-development Preparation 01</a>
 2.   <a href="http://www.youtube.com/watch?v=VzoUeBS71jQ&index=5&list=PL7PfK8Mp1rLGhuYZMUfJv25zLaCtjx3VC" target="_blank">How to create integrated Gear Application Part01</a>
 3.    <a href="http://www.youtube.com/watch?v=QDqhvbDEO-I&list=PL7PfK8Mp1rLGhuYZMUfJv25zLaCtjx3VC&index=5" target="_blank">How to create integrated Gear Application Part02</a>
 4.     <a href="http://www.youtube.com/watch?v=SFz3n49QUCs&index=6&list=PL7PfK8Mp1rLGhuYZMUfJv25zLaCtjx3VC" target="_blank">How to create integrated Gear Application Part03</a>
@@ -82,6 +82,62 @@ At this point you should have both Tizen and Andriod app running. And you should
 
 PS: Make sure you have few meetings created for the day with few attendees, location etc. 
  	 
+##Code Highlights
+
+* The code below in MainActivity starts Tizen service.
+
+```
+		Intent intent = new Intent(this, HelloAccessoryProviderService.class);
+    	startService(intent);
+```
+*   SOQL - This is the SOQL used to get meeting & attendees information.
+
+```
+
+		private String soql = "SELECT Id, Subject, AccountId, ActivityDateTime, WhatId,What.Name,What.type, WhoId, Who.Id,"
+				+ "Who.FirstName,Who.LastName, Description, DurationInMinutes, Location,"
+				+ " (SELECT EventId, RelationId, Relation.Name,Relation.Email FROM EventRelations) "
+				+ "from Event Where ActivityDateTime = Today";
+				
+```
+
+* The code below provides a way to perform SOQL directly from Samsung service.
+
+```
+		ClientManager cm = new ClientManager(getApplicationContext(),
+						SalesforceSDKManager.getInstance().getAccountType(),
+						SalesforceSDKManager.getInstance().getLoginOptions(),
+						true);
+				client = cm.peekRestClient();
+```
+
+* SOQL response is sent back to the watch using the following code
+
+```
+		public void sendMsgToWatch(String msg) {
+			final String message = msg;
+			final HelloAccessoryProviderConnection uHandler = mConnectionsMap
+					.get(Integer.parseInt(String.valueOf(mConnectionId)));
+			if (uHandler == null) {
+				Log.e(TAG,
+						"Error, can not get HelloAccessoryProviderConnection handler");
+				return;
+			}
+			new Thread(new Runnable() {
+				public void run() {
+					try {
+						uHandler.send(HELLOACCESSORY_CHANNEL_ID,
+								message.getBytes());
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}).start();
+		}
+		
+```
+
+
 
 
 
