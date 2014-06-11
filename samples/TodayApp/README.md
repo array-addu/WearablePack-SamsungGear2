@@ -46,19 +46,22 @@ The above videos shows you how to setup the environment. Once that's done, clone
 
 1. Import `TodayAnrdoidApp` into ADT (Android Development Toolkit).
 	- `File > Import > Android > Existing Android Code Into Workspace > TodayAnrdoidApp folder`
-2. Connect a compitable Samsung phone/tablet. (note: Android emulator won't work)
-3. Install three .apk files that were mentioned in the videos using `adb` tool. This  installs a test app on the Samsung device to test connection between Samsung device and Tizen emulator.
+2. Also Import `SalesforceSDK` into ADT
+	-  `TodayAndroidApp` depends on `SalesforceSDK`, so we need to add it as a dependency. To do that `Right click on "TodayAndroidApp" in Project Explorer > Properties > Android > "Library"- section > Click on Add and Add `SalesforceSDK` as dependency.
+	
+3. Connect a compitable Samsung phone/tablet. (note: Android emulator won't work)
+4. Install three .apk files that were mentioned in the videos using `adb` tool. This  installs a test app on the Samsung device to test connection between Samsung device and Tizen emulator.
    - `adb` tool comes with Android SDK.  It is located in `path-to-your-android-sdk-folder/build-tools/adb`
    - Run the following from the terminal(in the same order):
    -  `adb -d install path-to-downloaded-Applications_for_Emulator-folder/SAccessoryService_Emul.apk ` 
    - `adb -d install path-to-downloaded-Applications_for_Emulator-folder/SAFTCore_Emul.apk` 
    -  `adb -d install path-to-downloaded-Applications_for_Emulator-folder/HostManagerForEmul.apk` 
-4. Run `adb -d forward tcp:8230 tcp:8230` from the terminal  (assumes adb is in your PATH). This starts the connection to actually work.
-5.  Right click on the `TodayAnrdoidApp` project > Run As > Run As Android Application. 
-6.  You should see the app open on real Samsung device and see Salesforce login screen.
-7.  Go ahead and login to Salesforce.
-8.  You should now see a sample app with few buttons to test Salesforce connection from Android.
-9.  At this point your android app has started and also started Samsung service to talk to Tizen watch in the background.
+5. Run `adb -d forward tcp:8230 tcp:8230` from the terminal  (assumes adb is in your PATH). This starts the connection to actually work.
+6.  Right click on the `TodayAnrdoidApp` project > Run As > Run As Android Application. 
+7.  You should see the app open on real Samsung device and see Salesforce login screen.
+8.  Go ahead and login to Salesforce.
+9.  You should now see a sample app with few buttons to test Salesforce connection from Android.
+10.  At this point your android app has started and also started Samsung service to talk to Tizen watch in the background.
 
 
 ###STEP 3 (Tizen App)
