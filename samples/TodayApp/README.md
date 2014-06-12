@@ -122,17 +122,17 @@ PS: Make sure you have few meetings created for the day with few attendees, loca
 	    
 	    
 #### Check out some of the pics related to getting certificate:
-**GPG Mail plugin tool (https://gpgtools.org/)	**  
+#####GPG Mail plugin tool (https://gpgtools.org/)#####
 ![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/gpg-tool.png)	
 
 
-**GPG repository**
+#####GPG repository#####
 ![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/pgp-server.png)
 
-**Sending Email to Samsung**
+#####Sending Email to Samsung#####
 ![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/sending-email.png)
 
-**Registration mail back from Samsung**
+#####Registration mail back from Samsung#####
 ![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/registration-from-samsung.png)
 
 #### 5.2 Make the following changes to the code + real device
