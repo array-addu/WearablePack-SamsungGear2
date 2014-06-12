@@ -119,14 +119,25 @@ PS: Make sure you have few meetings created for the day with few attendees, loca
 	    - After several hours you will get an email from Samsung w/ registration.xml file.
 	    - Import that to Tizen IDE.
 	    - **Test** :You can test by trying to run any demo or this app directly on the watch. This simply shows that you can now install apps on the watch.
-	    Check out some of the pics:
 	    
-		
+	    
+## Check out some of the pics related to getting certificate:
+#### GPG Mail plugin tool (https://gpgtools.org/)	    
+![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/gpg-tool.png)	
 
+
+####GPG repository
+![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/pgp-server.png)
+
+####Sending Email to Samsung
+![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/sending-email.png)
+
+####Registration mail back from Samsung
+https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/registration-from-samsung.png
 
 #### Make the following changes to the code / device
 1.  **Make sure to uninstall all .apk files that you might have installed for testing / development**
-1. Transport property in the protocol file needs to be "BT" (Bloothoth) in both Android and Tizen projects. So set  `transport` value is `TRANSPORT_BT` in both `TodayTizenApp > res > xml > accessory.xml` and 'TodayAndroidApp > res > xml > accessory.xml` files as below.
+1. Transport property in the protocol file needs to be "BT" (bluetooth) in both Android and Tizen projects. So set  `transport` value is `TRANSPORT_BT` in both `TodayTizenApp > res > xml > accessory.xml` and 'TodayAndroidApp > res > xml > accessory.xml` files as below.
 
 ```
        <supportedTransports>
