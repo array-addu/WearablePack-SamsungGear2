@@ -61,10 +61,10 @@ public class MainActivity extends SalesforceActivity {
 		// Setup view
 		setContentView(R.layout.main);
 		
-
 		System.out.println("Doing startservice..");
 		Intent intent = new Intent(this, HelloAccessoryProviderService.class);
     	startService(intent);
+
 	}
 	
 	@Override 
@@ -76,6 +76,8 @@ public class MainActivity extends SalesforceActivity {
 		listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, new ArrayList<String>());
 		((ListView) findViewById(R.id.contacts_list)).setAdapter(listAdapter);				
 		
+
+    	
 		super.onResume();
 	}		
 	

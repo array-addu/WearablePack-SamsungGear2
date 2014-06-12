@@ -36,8 +36,10 @@ var ProviderAppName = "HelloAccessoryProvider";
 var ACTION_FETCH_MEETINGS = "fetch_meetings";
 var ACTION_LOG_A_CALL = "log_a_call";
 
-//store meetings list from Salesforce
-var Salesforce = {meetingsList: []};
+// store meetings list from Salesforce
+var Salesforce = {
+	meetingsList : []
+};
 
 function updateMeetings(data) {
 	var jsonData = JSON.parse(data);
@@ -61,9 +63,9 @@ function updateMeetings(data) {
 		var record = Salesforce.meetingsList[i];
 		var startTime = moment(record.ActivityDateTime, "YYYY-MM-DDThh (mm) a")
 				.format("hh:mm A");
-		//cache formatted startTime for future use
+		// cache formatted startTime for future use
 		Salesforce.meetingsList[i].formattedStartTime = startTime;
-		
+
 		var rendered = Mustache.render(template, {
 			startTime : startTime,
 			duration : record.DurationInMinutes,
@@ -81,43 +83,46 @@ function updateMeetingDetails(meetingId) {
 	var template = $('#meetingsDetailsTempl').html();
 	Mustache.parse(template);
 	var rendered = Mustache.render(template, {
-		startTime: meeting.formattedStartTime,
+		startTime : meeting.formattedStartTime,
 		title : meeting.Subject,
-		duration: meeting.DurationInMinutes,
-		description: meeting.Description,
-		location: meeting.Location,
-		attendeesHTML: attendeesHTML
+		duration : meeting.DurationInMinutes,
+		description : meeting.Description,
+		location : meeting.Location,
+		attendeesHTML : attendeesHTML
 	});
 	$('#meetingDetailsPage').append(rendered);
-	
+
 }
 
 function getMeetingAttendeesHTML(meetingId) {
 	var html;
 	var meeting = getMeetingById(meetingId);
 	var eventRelations = meeting.EventRelations;
-	
+
 	var attendees = eventRelations.records;
 	var len = attendees.length;
 	html = len > 0 ? html = "" : "<p>No Attendees</p>";
-
-	var template = $('#attendeesListTmpl').html();
-	Mustache.parse(template);
-	for(var i = 0; i < len; i++) {
-		var attendee = attendees[i];
-		html += Mustache.render(template, {Name: attendee.Relation.Name});
+	try {
+		var template = $('#attendeesListTmpl').html();
+		Mustache.parse(template);
+		for ( var i = 0; i < len; i++) {
+			var attendee = attendees[i];
+			html += Mustache.render(template, {
+				Name : attendee.Relation.Name
+			});
+		}
+	} catch (e) {
+		html = ""
 	}
-
 	return html;
-	
-}
 
+}
 
 function getMeetingById(meetingId) {
 	var len = Salesforce.meetingsList.length;
-	for (var i = 0; i < len; i++) {
+	for ( var i = 0; i < len; i++) {
 		var record = Salesforce.meetingsList[i];
-		if(record.Id == meetingId) {
+		if (record.Id == meetingId) {
 			return record;
 		}
 	}
@@ -131,13 +136,15 @@ function createHTML(log_string) {
 }
 
 function onerror(err) {
-	console.log(err);
+
+	// alert("in onerror\n" + err);
 }
 
 var agentCallback = {
 	onconnect : function(socket) {
+		// alert("in agentCallback")
 		SASocket = socket;
-		// alert("HelloAccessory Connection established with RemotePeer");
+		// //alert("HelloAccessory Connection established with RemotePeer");
 		createHTML("startConnection");
 
 		SASocket.setSocketStatusListener(function(reason) {
@@ -158,7 +165,7 @@ var peerAgentFindCallback = {
 				SAAgent.setServiceConnectionListener(agentCallback);
 				SAAgent.requestServiceConnection(peerAgent);
 			} else {
-				alert("Not expected app!! : " + peerAgent.appName);
+				// alert("Not expected app!! : " + peerAgent.appName);
 			}
 		} catch (err) {
 			console
@@ -170,6 +177,7 @@ var peerAgentFindCallback = {
 }
 
 function onsuccess(agents) {
+	// alert("onsuccess agents.length = " + agents && agents.length)
 	try {
 		if (agents.length > 0) {
 			SAAgent = agents[0];
@@ -177,7 +185,7 @@ function onsuccess(agents) {
 			SAAgent.setPeerAgentFindListener(peerAgentFindCallback);
 			SAAgent.findPeerAgents();
 		} else {
-			alert("Not found SAAgent!!");
+			// alert("Not found SAAgent!!");
 		}
 	} catch (err) {
 		console.log("exception [" + err.name + "] msg[" + err.message + "]");
@@ -185,8 +193,9 @@ function onsuccess(agents) {
 }
 
 function connect() {
+	// alert("in Connect()")
 	if (SASocket) {
-		alert('Already connected!');
+		// alert('Already connected!');
 		return false;
 	}
 	try {
@@ -209,10 +218,12 @@ function disconnect() {
 }
 
 function onreceive(channelId, data) {
+	// alert("in onreceive")
 	updateMeetings(data);
 }
 
 function fetch(actionName) {
+	// alert("in fetch")
 	try {
 		SASocket.setDataReceiveListener(onreceive);
 		SASocket.sendData(CHANNELID, actionName);
