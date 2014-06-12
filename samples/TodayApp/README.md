@@ -77,7 +77,7 @@ The above videos shows you how to setup the environment. Once that's done, clone
 
 
   
-###STEP 4 (Running the app on Watch Emulator + Real Samsung Phone")
+###STEP 4 (Running the app on a watch emulator + real Samsung Phone")
 
 
 1. Transport property in the protocol file needs to be "Wifi" for development / testing in both Android and Tizen projects. So set  `transport` value is `TRANSPORT_WIFI` in both `TodayTizenApp > res > xml > accessory.xml` and 'TodayAndroidApp > res > xml > accessory.xml` files as below.
@@ -96,7 +96,7 @@ PS: Make sure you have few meetings created for the day with few attendees, loca
  	
  	
 
-##Step 5 (Running the app on "real" watch + Real Samsung Phone)
+##Step 5 (Running the app on "REAL" watch + REAL Samsung Phone)
 #### 5.1 Get Samsung signed certificates and install it into Tizen IDE. 
 1. Watch this Samsung video <a href="http://www.youtube.com/watch?v=1olrFCyjyaM&index=2&list=PL7PfK8Mp1rLGhuYZMUfJv25zLaCtjx3VC" target="_blank">"Generating Certification" - Gear Pre-development Preparation 02</a>
 2. Some steps are missing in the video, so here are the high level steps:
