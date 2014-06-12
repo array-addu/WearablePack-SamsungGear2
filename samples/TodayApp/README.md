@@ -97,7 +97,7 @@ PS: Make sure you have few meetings created for the day with few attendees, loca
  	
 
 ##Step 5 (Running the app on "real" watch + Real Samsung Phone)
-#### Get Samsung signed certificates and install it into Tizen IDE. 
+#### 5.1 Get Samsung signed certificates and install it into Tizen IDE. 
 1. Watch this Samsung video <a href="http://www.youtube.com/watch?v=1olrFCyjyaM&index=2&list=PL7PfK8Mp1rLGhuYZMUfJv25zLaCtjx3VC" target="_blank">"Generating Certification" - Gear Pre-development Preparation 02</a>
 2. Some steps are missing in the video, so here are the high level steps:
 	- Connect your real watch to your laptop via usb.
@@ -121,21 +121,21 @@ PS: Make sure you have few meetings created for the day with few attendees, loca
 	    - **Test** :You can test by trying to run any demo or this app directly on the watch. This simply shows that you can now install apps on the watch.
 	    
 	    
-## Check out some of the pics related to getting certificate:
-#### GPG Mail plugin tool (https://gpgtools.org/)	    
+#### Check out some of the pics related to getting certificate:
+**GPG Mail plugin tool (https://gpgtools.org/)	**  
 ![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/gpg-tool.png)	
 
 
-####GPG repository
+**GPG repository**
 ![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/pgp-server.png)
 
-####Sending Email to Samsung
+**Sending Email to Samsung**
 ![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/sending-email.png)
 
-####Registration mail back from Samsung
-https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/registration-from-samsung.png
+**Registration mail back from Samsung**
+![image](https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/master/images/registration-from-samsung.png)
 
-#### Make the following changes to the code / device
+#### 5.2 Make the following changes to the code + real device
 1.  **Make sure to uninstall all .apk files that you might have installed for testing / development**
 1. Transport property in the protocol file needs to be "BT" (bluetooth) in both Android and Tizen projects. So set  `transport` value is `TRANSPORT_BT` in both `TodayTizenApp > res > xml > accessory.xml` and 'TodayAndroidApp > res > xml > accessory.xml` files as below.
 
@@ -156,13 +156,15 @@ https://raw.githubusercontent.com/developerforce/WearablePack-SamsungGear2/maste
 
 
 ###Gotchas
-1. Make sure to UNINSTALL `Samsung Gear Manager` app if you have already downloaded it from Samsung store. The 3 apk files you installed actually installs an emulator version of `Samsung Gear Manager` <b>which will conflict with the real</b> `Samsung Gear Manager`
+1. To test with emulator, make sure to UNINSTALL `Samsung Gear Manager` app if you have already downloaded it from Samsung store. The 3 apk files you installed actually installs an emulator version of `Samsung Gear Manager` <b>which will conflict with the real</b> `Samsung Gear Manager`
 2. Make sure you done have adb port forwarding `adb -d forward tcp:8230 tcp:8230` done <b>BEFORE the emulator startups</b>.
 3. You will need to kill the emulator and restart it every time you disconnect your Samsung device.
 4. It is good to have the latest Samsung device and Android SDK.
 5. If you are unable to unzip 'Applications For Emulator' zip file on mac(that contains 3 .apk files), see <a href="http://developer.samsung.com/forum/board/thread/view.do?boardName=SDK&messageId=264778&startId=zzzzz~&searchType=ALL&searchText=zip" target="_blank">this forum post</a> 
 6. Android Emulator wont work - so please use a real Samsung device.
 7. To interact with the emulator using mouse pointer, <b>first press 'command' button</b> then use the mouse.
+8. You need to uninstall everything and reinstall real `samsung gear manager` if you are pairing the phone with real gear watch. (you need emulator version if you are pairing w/ Gear emulator - see #1)
+9. GPG Mail - Make sure to create your public key using the same email that your Mail.app uses and send email to Samsung using from that email.
 
 
  	 
