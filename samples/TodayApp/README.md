@@ -74,6 +74,76 @@ The above videos shows you how to setup the environment. Once that's done, clone
 4.  If you are seeing 'Connected' in the 'HostManagerForEmul' example app, you are ready to try out hte `TodayTizenApp` app. 
   	- Right click on the `TodayTizenApp` project > Run As > Run As Tizen Web Application. 
   	
+
+
+  
+###STEP 4 (Running the app on Watch Emulator + Real Samsung Phone")
+
+
+1. Transport property in the protocol file needs to be "Wifi" for development / testing in both Android and Tizen projects. So set  `transport` value is `TRANSPORT_WIFI` in both `TodayTizenApp > res > xml > accessory.xml` and 'TodayAndroidApp > res > xml > accessory.xml` files as below.
+
+```
+       <supportedTransports>
+                <transport type="TRANSPORT_WIFI" />
+            </supportedTransports>
+
+```
+
+2. Build Tizen app from: `Project > Build Project` or `cmd + shift + b`. This will generate a new `Tizen.wgt`
+3.  Copy `Tizen.wgt` from Tizen IDE into Android project under `TodayAndroidApp > assets` folder.
+
+PS: Make sure you have few meetings created for the day with few attendees, location etc. 
+ 	
+ 	
+
+##Step 5 (Running the app on "real" watch + Real Samsung Phone)
+#### Get Samsung signed certificates and install it into Tizen IDE. 
+1. Watch this Samsung video <a href="http://www.youtube.com/watch?v=1olrFCyjyaM&index=2&list=PL7PfK8Mp1rLGhuYZMUfJv25zLaCtjx3VC" target="_blank">"Generating Certification" - Gear Pre-development Preparation 02</a>
+2. Some steps are missing in the video, so here are the high level steps:
+	- Connect your real watch to your laptop via usb.
+	- In Tizen editor, you will see the device under `Connection Explorer`
+	- Right click on the device > Properties and get `DUID` (Device ID)
+	- Click on `Generate Certificate` on the toolbar (red icon)
+	- Fill out the form and enter `DUID` (you can add multiple) and generate certificate request xml file.
+	-  **Secure PGP Mail: We need to send the certificate request to gear2.sec@samsung.com that's PGP encrypted**
+	    - We need a Mail.app plugin called <a href="https://gpgtools.org/" target="_blank">https://gpgtools.org/</a> 
+	    - Note - PGP mail can't be sent via web emails.
+	    - Once you install gpgtool, create a public + private key.
+	    - gpgtool will ask for an email. **Make sure to use the SAME EMAIL that you will be using to send mail to Samsung in Mail.app**. 
+	    - Export your public key to some folder
+	    - Download Samsung's public key from <a href="https://keyserver.pgp.com" target="_blank">https://keyserver.pgp.com</a> by entering `gear2.sec@samsung.com` email.
+	    - Import Samsung's public key to PGP tool.
+	    - Restart Mail.app
+	    - Open Mail.app, Enter email: gear2.sec@samsung.com, and attach request.xml and your publickey. Click Encrypt.
+	    - Send Mail
+	    - After several hours you will get an email from Samsung w/ registration.xml file.
+	    - Import that to Tizen IDE.
+	    - **Test** :You can test by trying to run any demo or this app directly on the watch. This simply shows that you can now install apps on the watch.
+	    Check out some of the pics:
+	    
+		
+
+
+#### Make the following changes to the code / device
+1.  **Make sure to uninstall all .apk files that you might have installed for testing / development**
+1. Transport property in the protocol file needs to be "BT" (Bloothoth) in both Android and Tizen projects. So set  `transport` value is `TRANSPORT_BT` in both `TodayTizenApp > res > xml > accessory.xml` and 'TodayAndroidApp > res > xml > accessory.xml` files as below.
+
+```
+       <supportedTransports>
+                <transport type="TRANSPORT_BT" />
+            </supportedTransports>
+
+```
+
+2. Build Tizen app from: `Project > Build Project` or `cmd + shift + b`. This will generate a new `Tizen.wgt`
+3.  Copy `Tizen.wgt` from Tizen IDE into Android project under `TodayAndroidApp > assets` folder.
+5.  Install real `Samsung Gear Manager` from `Samsung Appstor`.
+6.  Pair the Phone with gear and make sure it is ready.
+
+
+
+
+
 ###Gotchas
 1. Make sure to UNINSTALL `Samsung Gear Manager` app if you have already downloaded it from Samsung store. The 3 apk files you installed actually installs an emulator version of `Samsung Gear Manager` <b>which will conflict with the real</b> `Samsung Gear Manager`
 2. Make sure you done have adb port forwarding `adb -d forward tcp:8230 tcp:8230` done <b>BEFORE the emulator startups</b>.
@@ -84,11 +154,6 @@ The above videos shows you how to setup the environment. Once that's done, clone
 7. To interact with the emulator using mouse pointer, <b>first press 'command' button</b> then use the mouse.
 
 
-  
-###STEP 4 (Running the app)
-At this point you should have both Tizen and Andriod app running. And you should see all your meeting details in the watch.
-
-PS: Make sure you have few meetings created for the day with few attendees, location etc. 
  	 
 ##Code Highlights (Android)
 
@@ -162,6 +227,7 @@ PS: Make sure you have few meetings created for the day with few attendees, loca
 ```
 
 
+
 ##Code Highlights (Tizen)
 * onconnect is called when the Tizen connects to Android. It also calls `fetch` custom function. 
 
@@ -206,6 +272,14 @@ function onreceive(channelId, data) {
 	updateMeetings(data);
 }
 ```
+
+## TODO
+** As mentioned in the video, the example app only has code for the whole interaction b/w Android and the Watch and Salesforce, get list of meetings, get meeting details, list of attendees etc.***
+####Things to do
+- Add code to get Attendee details
+- Send Email
+- Log a call
+
 
 
 
