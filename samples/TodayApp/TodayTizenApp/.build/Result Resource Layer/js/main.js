@@ -55,14 +55,30 @@ function updateMeetings(data) {
 	});
 	$('#meetingsListDiv').append(rendered);
 
+	
+	//var a = moment();
+	//var b = moment.utc();
+	//alert("a = " + a.hours());  // 2013-02-04T10:35:24-08:00
+	//alert("b = "+ b.hours());  // 2013-02-04T18:35:24+00:00
+	
 	// iterate for each meeting item
 	var template = $('#meetingsListItem').html();
 	Mustache.parse(template); // optional, speeds up future uses
 	for ( var i = 0; i < len; i++) {
 
 		var record = Salesforce.meetingsList[i];
-		var startTime = moment(record.ActivityDateTime, "YYYY-MM-DDThh (mm) a")
-				.format("hh:mm A");
+
+		//convert utc to moment's utc and also format it
+		var startTime = moment.utc(record.ActivityDateTime, "YYYY-MM-DDThh (mm) a");
+		
+		//convert to local timezone
+		startTime.local()
+		
+
+		//format it to show hours:minutes ampm
+			startTime = startTime.format("hh:mm A");
+		
+		
 		// cache formatted startTime for future use
 		Salesforce.meetingsList[i].formattedStartTime = startTime;
 

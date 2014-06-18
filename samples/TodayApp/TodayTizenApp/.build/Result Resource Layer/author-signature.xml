@@ -92,7 +92,7 @@
 </Reference>
 <Reference URI="js/main.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>wHnBwsLly3BL0PjC6IyK2an5aZ1sjufInpOnMVe1q+s=</DigestValue>
+<DigestValue>t/GBWoaL984nkpcqfgN9qxQH7IiPofI332vV2Kd9cMA=</DigestValue>
 </Reference>
 <Reference URI="js/moment.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -383,11 +383,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-nS01Ujsz4sz3CgRMeW8xQXbXI8qFuV2WVpEzvrehQGwWjQEspGhRw0xAQFwkDzy8O8my8E+YHiC8
-p/0C3L8crHe2Tyl4WB2nI/KxdngozHCqh+FX4oIBOtz/HQKude7Xg0ChlCWDwsatQk/dk4jKdEBN
-icTND8cz1qyQGsj6AXY2GgHhpZk2mvGN++gTwwXDMxL1OYSvUcKZGclL6CbU1tWs1YPrGKE5I6Uq
-e+VybA+G5wdTaBkvPgiAzNMRd+VzdKRnLyam1pIckCYI5UmYLNE5jXtFiUcJe1zqNxJ+vDi66BYD
-wNgqtScGMMnWvcney5nqExfnAECBzQAHfXsclw==
+tsrkV4ZIjddr3FC07PeJbNLyS6vIkxi8YtMv9sIwQ9u0STGDItskWBaKwekDRo5e9JLrOStWvhFf
+8ahkJpAMa4I4QlSPugQbPQwNZMTH4a2OVd33p7sNgEgOqcwh+7oyrE5Z6gVX0eqWx/9fF6m9cD4W
+buWuh8WczF8VDQ4j6SvFav73FVJAifBL9FUN0+YlYtEBMQupwHE0ute4y/DoBJ9gZm95QywrS0L3
+5duUjORa0K4YSd8hSRXaENLk/PIsDodH1cWhQ0tkqzmNXDiISR7neBqfjGfxQ0/NVyuO7I0w3h5q
++2zoTSffWsLGIj+7UAyYJjr5kPAfIJiQB4Gs5A==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
